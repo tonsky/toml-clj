@@ -1,0 +1,19 @@
+{:paths ["src" "target/classes"]
+ :jvm-opts ["-Duser.language=en" "-Duser.country=US" "-Dfile.encoding=UTF-8"]
+ :deps
+ {org.clojure/clojure {:mvn/version "1.11.1"}}
+ :aliases
+ {:dev
+  {:jvm-opts ["-ea"]
+   :extra-paths ["dev" "test"]
+   :extra-deps 
+   {org.clojure/tools.namespace {:mvn/version "1.4.4"}
+    lambdaisland/deep-diff2     {:mvn/version "2.10.211"}}}
+  :bench
+  {:extra-paths ["bench" "target/classes"]
+   :extra-deps
+   {criterium/criterium            {:mvn/version "0.4.6"}
+    cheshire/cheshire              {:mvn/version "5.12.0"}
+    clj-toml/clj-toml              {:mvn/version "0.3.1"}
+    ; com.github.vmfhrmfoaj/clj-toml {:mvn/version "1.0.0-0.1"}
+    org.tomlj/tomlj                {:mvn/version "1.1.0"}}}}}
