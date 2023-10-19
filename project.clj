@@ -2,6 +2,7 @@
   :description "Fast TOML parser"
   :license     {:name "MIT" :url "https://github.com/tonsky/toml-clj/blob/master/LICENSE"}
   :url         "https://github.com/tonsky/toml-clj"
+  :java-source-paths ["src-java"]
   :dependencies
   [[org.clojure/clojure "1.11.1"]]
   :deploy-repositories

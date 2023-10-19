@@ -194,7 +194,7 @@
 
 (deftest example-test
   (testing "TOML example"
-    (is (= (core/read-string (slurp "test/example.toml"))
+    (is (= (core/read-string (slurp "test/examples/example.toml"))
           {"title" "TOML Example"
            "owner"
            {"name" "Tom Preston-Werner"
@@ -226,7 +226,7 @@
 
 (deftest hard-example-test
   (testing "TOML hard example"
-    (is (= (core/read-string (slurp "test/hard_example.toml"))
+    (is (= (core/read-string (slurp "test/examples/hard_example.toml"))
           {"the"
            {"hard"
             {"another_test_string" " Same thing, but with a string #",
@@ -315,4 +315,4 @@
                          {"name" "granny smith"}]}
              {"name" "banana"
               "variety" [{"name" "plantain"}]}]}
-          (core/read-string (slurp "test/example-v0.4.0.toml"))))))
+          (core/read-string (slurp "test/examples/example-v0.4.0.toml"))))))
